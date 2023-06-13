@@ -1,0 +1,906 @@
+<html lang="en" data-lt-installed="true">
+    <head>
+        <meta charset="utf-8">
+        <title>Tada Rd InAPPS</title>
+        <base href="/">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <link rel="icon" type="image/png" sizes="33x33" href="https://colmapp.vteximg.com.br/arquivos/favicon-32x32.png" data-react-helmet="true"> 
+        <style>
+
+
+    /*.swal2-progress-steps{
+        flex-wrap:wrap;
+        align-items:center;
+        max-width:100%;
+        margin:1.25em auto;
+        padding:0;
+        background:rgba(0,0,0,0);
+        font-weight:600
+    }
+    .swal2-progress-steps li{
+        display:inline-block;
+        position:relative
+    }
+    .swal2-progress-steps .swal2-progress-step{
+        z-index:20;
+        flex-shrink:0;
+        width:2em;
+        height:2em;
+        border-radius:2em;
+        background:#2778c4;
+        color:#fff;
+        line-height:2em;
+        text-align:center
+    }
+    .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step{
+        background:#2778c4
+    }
+    .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step~.swal2-progress-step{
+        background:#add8e6;
+        color:#fff
+    }
+    .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step~.swal2-progress-step-line{
+        background:#add8e6
+    }
+    .swal2-progress-steps .swal2-progress-step-line{
+        z-index:10;
+        flex-shrink:0;
+        width:2.5em;
+        height:.4em;
+        margin:0 -1px;
+        background:#2778c4
+    }
+    [class^=swal2]{
+        -webkit-tap-highlight-color:rgba(0,0,0,0)
+    }
+    .swal2-show{
+        animation:swal2-show .3s
+    }
+    .swal2-hide{
+        animation:swal2-hide .15s forwards
+    }
+    .swal2-noanimation{
+        transition:none
+    }
+    .swal2-scrollbar-measure{
+        position:absolute;
+        top:-9999px;
+        width:50px;
+        height:50px;
+        overflow:scroll
+    }
+    .swal2-rtl .swal2-close{
+        margin-right:initial;
+        margin-left:0
+    }
+    .swal2-rtl .swal2-timer-progress-bar{
+        right:0;
+        left:auto
+    }
+    @keyframes swal2-toast-show{
+        0%{
+            transform:translateY(-0.625em) rotateZ(2deg)
+        }
+        33%{
+            transform:translateY(0) rotateZ(-2deg)
+        }
+        66%{
+            transform:translateY(0.3125em) rotateZ(2deg)
+        }
+        100%{
+            transform:translateY(0) rotateZ(0deg)
+        }
+    }
+    @keyframes swal2-toast-hide{
+        100%{
+            transform:rotateZ(1deg);
+            opacity:0
+        }
+    }
+    @keyframes swal2-toast-animate-success-line-tip{
+        0%{
+            top:.5625em;
+            left:.0625em;
+            width:0
+        }
+        54%{
+            top:.125em;
+            left:.125em;
+            width:0
+        }
+        70%{
+            top:.625em;
+            left:-0.25em;
+            width:1.625em
+        }
+        84%{
+            top:1.0625em;
+            left:.75em;
+            width:.5em
+        }
+        100%{
+            top:1.125em;
+            left:.1875em;
+            width:.75em
+        }
+    }
+    @keyframes swal2-toast-animate-success-line-long{
+        0%{
+            top:1.625em;
+            right:1.375em;
+            width:0
+        }
+        65%{
+            top:1.25em;
+            right:.9375em;
+            width:0
+        }
+        84%{
+            top:.9375em;
+            right:0;
+            width:1.125em
+        }
+        100%{
+            top:.9375em;
+            right:.1875em;
+            width:1.375em
+        }
+    }
+    @keyframes swal2-show{
+        0%{
+            transform:scale(0.7)
+        }
+        45%{
+            transform:scale(1.05)
+        }
+        80%{
+            transform:scale(0.95)
+        }
+        100%{
+            transform:scale(1)
+        }
+    }
+    @keyframes swal2-hide{
+        0%{
+            transform:scale(1);
+            opacity:1
+        }
+        100%{
+            transform:scale(0.5);
+            opacity:0
+        }
+    }
+    @keyframes swal2-animate-success-line-tip{
+        0%{
+            top:1.1875em;
+            left:.0625em;
+            width:0
+        }
+        54%{
+            top:1.0625em;
+            left:.125em;
+            width:0
+        }
+        70%{
+            top:2.1875em;
+            left:-0.375em;
+            width:3.125em
+        }
+        84%{
+            top:3em;
+            left:1.3125em;
+            width:1.0625em
+        }
+        100%{
+            top:2.8125em;
+            left:.8125em;
+            width:1.5625em
+        }
+    }
+    @keyframes swal2-animate-success-line-long{
+        0%{
+            top:3.375em;
+            right:2.875em;
+            width:0
+        }
+        65%{
+            top:3.375em;
+            right:2.875em;
+            width:0
+        }
+        84%{
+            top:2.1875em;
+            right:0;
+            width:3.4375em
+        }
+        100%{
+            top:2.375em;
+            right:.5em;
+            width:2.9375em
+        }
+    }
+    @keyframes swal2-rotate-success-circular-line{
+        0%{
+            transform:rotate(-45deg)
+        }
+        5%{
+            transform:rotate(-45deg)
+        }
+        12%{
+            transform:rotate(-405deg)
+        }
+        100%{
+            transform:rotate(-405deg)
+        }
+    }
+    @keyframes swal2-animate-error-x-mark{
+        0%{
+            margin-top:1.625em;
+            transform:scale(0.4);
+            opacity:0
+        }
+        50%{
+            margin-top:1.625em;
+            transform:scale(0.4);
+            opacity:0
+        }
+        80%{
+            margin-top:-0.375em;
+            transform:scale(1.15)
+        }
+        100%{
+            margin-top:0;
+            transform:scale(1);
+            opacity:1
+        }
+    }
+    @keyframes swal2-animate-error-icon{
+        0%{
+            transform:rotateX(100deg);
+            opacity:0
+        }
+        100%{
+            transform:rotateX(0deg);
+            opacity:1
+        }
+    }
+    @keyframes swal2-rotate-loading{
+        0%{
+            transform:rotate(0deg)
+        }
+        100%{
+            transform:rotate(360deg)
+        }
+    }
+    @keyframes swal2-animate-question-mark{
+        0%{
+            transform:rotateY(-360deg)
+        }
+        100%{
+            transform:rotateY(0)
+        }
+    }
+    @keyframes swal2-animate-i-mark{
+        0%{
+            transform:rotateZ(45deg);
+            opacity:0
+        }
+        25%{
+            transform:rotateZ(-25deg);
+            opacity:.4
+        }
+        50%{
+            transform:rotateZ(15deg);
+            opacity:.8
+        }
+        75%{
+            transform:rotateZ(-5deg);
+            opacity:1
+        }
+        100%{
+            transform:rotateX(0);
+            opacity:1
+        }
+    }
+    body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown){
+        overflow:hidden
+    }
+    body.swal2-height-auto{
+        height:auto !important
+    }
+    body.swal2-no-backdrop .swal2-container{
+        background-color:rgba(0,0,0,0) !important;
+        pointer-events:none
+    }
+    body.swal2-no-backdrop .swal2-container .swal2-popup{
+        pointer-events:all
+    }
+    body.swal2-no-backdrop .swal2-container .swal2-modal{
+        box-shadow:0 0 10px rgba(0,0,0,.4)
+    }
+    @media print{
+        body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown){
+            overflow-y:scroll !important
+        }
+        body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown)>[aria-hidden=true]{
+            display:none
+        }
+        body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) .swal2-container{
+            position:static !important
+        }
+    }
+    body.swal2-toast-shown .swal2-container{
+        box-sizing:border-box;
+        width:360px;
+        max-width:100%;
+        background-color:rgba(0,0,0,0);
+        pointer-events:none
+    }
+    body.swal2-toast-shown .swal2-container.swal2-top{
+        top:0;
+        right:auto;
+        bottom:auto;
+        left:50%;
+        transform:translateX(-50%)
+    }
+    body.swal2-toast-shown .swal2-container.swal2-top-end,body.swal2-toast-shown .swal2-container.swal2-top-right{
+        top:0;
+        right:0;
+        bottom:auto;
+        left:auto
+    }
+    body.swal2-toast-shown .swal2-container.swal2-top-start,body.swal2-toast-shown .swal2-container.swal2-top-left{
+        top:0;
+        right:auto;
+        bottom:auto;
+        left:0
+    }
+    body.swal2-toast-shown .swal2-container.swal2-center-start,body.swal2-toast-shown .swal2-container.swal2-center-left{
+        top:50%;
+        right:auto;
+        bottom:auto;
+        left:0;
+        transform:translateY(-50%)
+    }
+    body.swal2-toast-shown .swal2-container.swal2-center{
+        top:50%;
+        right:auto;
+        bottom:auto;
+        left:50%;
+        transform:translate(-50%, -50%)
+    }
+    body.swal2-toast-shown .swal2-container.swal2-center-end,body.swal2-toast-shown .swal2-container.swal2-center-right{
+        top:50%;
+        right:0;
+        bottom:auto;
+        left:auto;
+        transform:translateY(-50%)
+    }
+    body.swal2-toast-shown .swal2-container.swal2-bottom-start,body.swal2-toast-shown .swal2-container.swal2-bottom-left{
+        top:auto;
+        right:auto;
+        bottom:0;
+        left:0
+    }
+    body.swal2-toast-shown .swal2-container.swal2-bottom{
+        top:auto;
+        right:auto;
+        bottom:0;
+        left:50%;
+        transform:translateX(-50%)
+    }
+    body.swal2-toast-shown .swal2-container.swal2-bottom-end,body.swal2-toast-shown .swal2-container.swal2-bottom-right{
+        top:auto;
+        right:0;
+        bottom:0;
+        left:auto
+    }
+    
+    .timer[_ngcontent-yof-c8] span[_ngcontent-yof-c8]{ /*AQUI INICIA LA EDICION EL BOX*/
+      /*  font-size:1em;
+        margin:100%;
+    }
+    *[_ngcontent-yof-c8], [_ngcontent-yof-c8]:before, [_ngcontent-yof-c8]:after{
+        box-sizing:border-box;
+        border-width:0;
+        border-style:solid;
+        border-color:#e5e7eb
+    }
+    [_ngcontent-yof-c8]:before, [_ngcontent-yof-c8]:after{
+        --tw-content: ""
+    }
+    
+    
+   
+    
+    
+   
+   
+    
+    
+    
+    
+    
+   
+    
+    
+    
+    [_ngcontent-yof-c8]:disabled{
+        cursor:default
+    }
+    img[_ngcontent-yof-c8], svg[_ngcontent-yof-c8], video[_ngcontent-yof-c8], canvas[_ngcontent-yof-c8], audio[_ngcontent-yof-c8], iframe[_ngcontent-yof-c8], embed[_ngcontent-yof-c8], object[_ngcontent-yof-c8]{
+        display:inline;
+        vertical-align:middle
+    }
+    img[_ngcontent-yof-c8], video[_ngcontent-yof-c8]{
+        max-width:100%;
+        height:auto;
+    }
+    [hidden][_ngcontent-yof-c8]{
+        display: flexbox;
+    }
+    *[_ngcontent-yof-c8], [_ngcontent-yof-c8]:before, [_ngcontent-yof-c8]:after{
+        --tw-translate-x: 0;
+        --tw-translate-y: 0;
+        --tw-rotate: 0;
+        --tw-skew-x: 0;
+        --tw-skew-y: 0;
+        --tw-scale-x: 1;
+        --tw-scale-y: 1;
+        --tw-pan-x: ;
+        --tw-pan-y: ;
+        --tw-pinch-zoom: ;
+        --tw-scroll-snap-strictness: proximity;
+        --tw-ordinal: ;
+        --tw-slashed-zero: ;
+        --tw-numeric-figure: ;
+        --tw-numeric-spacing: ;
+        --tw-numeric-fraction: ;
+        --tw-ring-inset: ;
+        --tw-ring-offset-width: 0px;
+        --tw-ring-offset-color: #fff;
+        --tw-ring-color: rgb(59 130 246 / .5);
+        --tw-ring-offset-shadow: 0 0 #0000;
+        --tw-ring-shadow: 0 0 #0000;
+        --tw-shadow: 0 0 #0000;
+        --tw-shadow-colored: 0 0 #0000;
+        --tw-blur: ;
+        --tw-brightness: ;
+        --tw-contrast: ;
+        --tw-grayscale: ;
+        --tw-hue-rotate: ;
+        --tw-invert: ;
+        --tw-saturate: ;
+        --tw-sepia: ;
+        --tw-drop-shadow: ;
+        --tw-backdrop-blur: ;
+        --tw-backdrop-brightness: ;
+        --tw-backdrop-contrast: ;
+        --tw-backdrop-grayscale: ;
+        --tw-backdrop-hue-rotate: ;
+        --tw-backdrop-invert: ;
+        --tw-backdrop-opacity: ;
+        --tw-backdrop-saturate: ;
+        --tw-backdrop-sepia: ;
+    }
+    .container[_ngcontent-yof-c8]{
+        width:100%;
+        margin-right:auto;
+        margin-left:auto;
+        padding-right:1rem;
+        padding-left:1rem
+    }
+    @media (min-width: 640px){
+        .container[_ngcontent-yof-c8]{
+            max-width:100%;
+            padding-right:2rem;
+            padding-left:2rem
+        }
+    }
+    @media (min-width: 768px){
+        .container[_ngcontent-yof-c8]{
+            max-width:768px
+        }
+    }
+    @media (min-width: 1080px){
+        .container[_ngcontent-yof-c8]{
+            max-width:1080px;
+            padding-right:4rem;
+            padding-left:4rem
+        }
+    }
+    @media (min-width: 1080px){
+        .container[_ngcontent-yof-c8]{
+            max-width:1080px;
+            padding-right:5rem;
+            padding-left:5rem
+        }
+    }
+    @media (min-width: 1080px){
+        .container[_ngcontent-yof-c8]{
+            max-width:1080px;
+            padding-right:10rem;
+            padding-left:10rem
+        }
+    }
+  
+    
+    .-left-2[_ngcontent-yof-c8]{
+        left:-.5rem
+    }
+    .-right-2[_ngcontent-yof-c8]{
+        right:-.5rem
+    }
+    .left-0[_ngcontent-yof-c8]{
+        left:0
+    }
+    .right-0[_ngcontent-yof-c8]{
+        right:0
+    }
+    .bottom-0[_ngcontent-yof-c8]{
+        bottom:0
+    }
+    .left-\__ph-0__[_ngcontent-yof-c8]{
+        left:50%
+    }
+    .bottom-\__ph-0__[_ngcontent-yof-c8]{
+        bottom:8%
+    }
+    .mt-32[_ngcontent-yof-c8]{
+        margin-top:8rem
+    }
+    .mt-16[_ngcontent-yof-c8]{
+        margin-top:4rem
+    }
+    .mt-5[_ngcontent-yof-c8]{
+        margin-top:1.25rem
+    }
+    .flex[_ngcontent-yof-c8]{
+        display:flex
+    }
+    
+    
+   
+   
+   
+   
+    @media (min-width: 1280px){
+        .xl\:bottom-\__ph-0__[_ngcontent-yof-c8]{
+            bottom:10%
+        }
+        .xl\:h-52[_ngcontent-yof-c8]{
+            height:13rem
+        }
+    }
+    .countdown2[_ngcontent-yof-c8]{
+        position:absolute;
+        inset:0;
+        font-family:Bright;
+        background-color:#fff;
+        background-repeat:no-repeat;
+        background-size:cover;
+        overflow:hidden;
+        background-position-x:center
+    }
+    .image_center[_ngcontent-yof-c8]{
+        display:block;
+        margin-left:auto;
+        margin-right:auto;
+        height:8rem;
+        margin-bottom:14px
+    }
+    .box[_ngcontent-yof-c8]{
+        width:100%;
+        padding:5px
+    }
+    .box[_ngcontent-yof-c8]:before, .box[_ngcontent-yof-c8]:after{
+        content:"\2022";
+        position:absolute;
+        width:14px;
+        height:14px;
+        font-size:14px;
+        color:#b78846;
+        border:2px solid #b78846;
+        line-height:12px;
+        top:5px;
+        text-align:center
+    }
+    .box[_ngcontent-yof-c8]:before{
+        left:5px
+    }
+    .box[_ngcontent-yof-c8]:after{
+        right:5px
+    }
+    .box[_ngcontent-yof-c8] .box-inner[_ngcontent-yof-c8]{/*Aqui va el tamano de la caja*/
+      /*  position:relative;
+        border:2px solid #b78846;
+        margin-bottom: 78px;
+        height:-webkit-fill-available
+    }
+    .box[_ngcontent-yof-c8] .box-inner[_ngcontent-yof-c8]:before, .box[_ngcontent-yof-c8] .box-inner[_ngcontent-yof-c8]:after{
+        content:"\2022";
+        position:absolute;
+        width:14px;
+        height:14px;
+        font-size:14px;
+        color:#b78846;
+        border:2px solid #b78846;
+        line-height:12px;
+        bottom:-1px;
+        text-align:center
+    }
+    .box[_ngcontent-yof-c8] .box-inner[_ngcontent-yof-c8]:before{
+        left:-2px
+    }
+    .box[_ngcontent-yof-c8] .box-inner[_ngcontent-yof-c8]:after{
+        right:-2px
+    }
+    #myVideo[_ngcontent-yof-c8]{
+        position:fixed;
+        height:100vh;
+        width:100vw;
+        background-size:cover;
+        overflow:hidden;
+        object-fit:cover
+    }
+    .content[_ngcontent-yof-c8]{
+        position:absolute;
+        top:63vh;
+        color:#f1f1f1;
+        width:100%;
+        padding:20px;
+        right:0;
+        bottom:0;
+        left:0;
+        font-family:Bright
+    }
+    .game[_ngcontent-yof-c8]{
+        height:75vh;
+        width:89vw;
+        position:relative
+    }
+    .danger-line[_ngcontent-yof-c8]{
+        width:100%;
+        height:5px;
+        position:absolute;
+        bottom:0
+    }
+    .basket[_ngcontent-yof-c8]{
+        width:80px;
+        height:50px;
+        position:absolute;
+        bottom:15px;
+        left:calc(50% - 25px)
+    }
+    .simpleBeer[_ngcontent-yof-c8]{
+        width:30px;
+        height:30px;
+        position:absolute
+    }
+    .swal2-popup[_ngcontent-yof-c8]{
+        font-family:Bright!important
+    }
+    .demo[_ngcontent-yof-c8]{
+        position:absolute;
+        left:50%;
+        top:50%;
+        width:100%;
+        height:140px;
+        margin-top:-70px;
+        padding:10px;
+        border-radius:20px;
+        transform:translate(-50%)
+    }
+    .demo__colored-blocks[_ngcontent-yof-c8]{
+        overflow:hidden;
+        position:absolute;
+        left:50%;
+        top:0;
+        width:314px;
+        height:100%;
+        margin-left:-158px;
+        padding:10px;
+        border-radius:20px;
+        perspective:1000px;
+        animation:_ngcontent-yof-c8_demoAnim 4s ease-in-out infinite,contAnim 4s infinite
+    }
+    .demo__colored-blocks-rotater[_ngcontent-yof-c8]{
+        position:absolute;
+        left:0;
+        top:0;
+        width:100%;
+        height:100%;
+        border-radius:inherit;
+        animation:_ngcontent-yof-c8_rotation 1.3s linear infinite
+    }
+    .demo__colored-blocks-inner[_ngcontent-yof-c8]{
+        overflow:hidden;
+        position:relative;
+        height:100%;
+        background:#5e2880;
+        border-radius:inherit
+    }
+    .demo__colored-block[_ngcontent-yof-c8]{
+        position:absolute;
+        left:50%;
+        top:50%;
+        width:300%;
+        height:300%;
+        transform-origin:0 0
+    }
+    .demo__colored-block[_ngcontent-yof-c8]:nth-child(1){
+        transform:rotate(0) skew(-30deg);
+        background-color:#ffd466
+    }
+    .demo__colored-block[_ngcontent-yof-c8]:nth-child(2){
+        transform:rotate(120deg) skew(-30deg);
+        background-color:#f9b200
+    }
+    .demo__colored-block[_ngcontent-yof-c8]:nth-child(3){
+        transform:rotate(240deg) skew(-30deg);
+        background-color:#f28e00
+    }
+    .demo__inner[_ngcontent-yof-c8]{
+        overflow:hidden;
+        position:relative;
+        width:100%;
+        height:100%
+    }
+    .demo__numbers[_ngcontent-yof-c8]{
+        overflow:visible;
+        position:absolute;
+        left:50%;
+        top:50%;
+        width:100px;
+        height:100px;
+        margin-left:-50px;
+        margin-top:-50px
+    }
+    .demo__numbers-path[_ngcontent-yof-c8]{
+        fill:none;
+        stroke-width:10px;
+        stroke:#fff;
+        stroke-linecap:round;
+        stroke-linejoin:round;
+        stroke-dasharray:0,518.055065155;
+        stroke-dashoffset:0;
+        animation:_ngcontent-yof-c8_numAnim 4s ease-in-out infinite;
+        opacity:0
+    }
+    .demo__text[_ngcontent-yof-c8]{
+        position:absolute;
+        left:50%;
+        top:0;
+        width:314px;
+        height:100%;
+        margin-left:-158px;
+        text-align:center;
+        line-height:140px;
+        font-size:1.2em;
+        color:#fff;
+        text-transform:uppercase;
+        letter-spacing:15px;
+        transform:translate(10px);
+        animation:_ngcontent-yof-c8_hideText 4s infinite
+    }
+    @keyframes _ngcontent-yof-c8_contAnim{
+        15%,to{
+            margin-left:-158px;
+            width:314px
+        }
+        25%,90%{
+            margin-left:-70px;
+            width:140px
+        }
+    }
+    @keyframes _ngcontent-yof-c8_numAnim{
+        15%{
+            stroke-dasharray:0,518.055065155;
+            stroke-dashoffset:0;
+            opacity:0
+        }
+        25%,41%{
+            opacity:1;
+            stroke-dasharray:144.4256591797,518.055065155;
+            stroke-dashoffset:-40
+        }
+        53%,66%{
+            stroke-dasharray:136.0216217041,518.055065155;
+            stroke-dashoffset:-227.238697052
+        }
+        76%{
+            stroke-dasharray:113.4751205444,518.055065155;
+            stroke-dashoffset:-445.8995704651
+        }
+        88%,to{
+            stroke-dasharray:72.1554946899,518.055065155;
+            stroke-dashoffset:-445.8995704651
+        }
+        92%{
+            opacity:1
+        }
+        to{
+            opacity:0
+        }
+    }
+    @keyframes _ngcontent-yof-c8_rotation{
+        to{
+            transform:rotate(360deg)
+        }
+    }
+    @keyframes _ngcontent-yof-c8_demoAnim{
+        15%{
+            border-radius:20px;
+            transform:rotate(0)
+        }
+        30%,43%{
+            border-radius:50%;
+            transform:rotate(360deg)
+        }
+        52%,65%{
+            border-radius:0;
+            transform:rotate(720deg)
+        }
+        78%,90%{
+            border-radius:50%;
+            transform:rotate(1080deg)
+        }
+        to{
+            border-radius:20px;
+            transform:rotate(1440deg)
+        }
+    }
+    @keyframes _ngcontent-yof-c8_hideText{
+        15%,to{
+            opacity:1
+        }
+        20%,96%{
+            opacity:0
+        }
+    }
+    .imgButton[_ngcontent-yof-c8]{
+        margin-top:4vh;
+        background-image:url(/assets/img/boton.png);
+        background-size:cover;
+        background-repeat:no-repeat;
+        height:2em;
+        width:30vw;
+        position:relative;
+        top:43vh
+    }
+    .instructions_bottom[_ngcontent-yof-c8]{
+        position:relative;
+        top:45vh
+    }*/
+    .video3{
+        position: relative ;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+        
+    }
+    .video3{
+        position: absolute ;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    </style>
+</head>
+<body>
+    <app-video _nghost-yof-c8=""><div _ngcontent-yof-c8="" class="countdown2 box" class="video1">
+        <div _ngcontent-yof-c8="" class="box-inner"><div _ngcontent-yof-c8="" class="container text-center" class="video3" style="margin-top: 1rem;">
+            <div _ngcontent-yof-c8="" class="start">
+                <div _ngcontent-yof-c8="" align="center" class="titulos">
+                    <div _ngcontent-yof-c8="" class="video">
+                        <video autoplay controls align="center" class="video3"> <source src="video3.mp4" type="video/mp4" class="rounded-md"></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
